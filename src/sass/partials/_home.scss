@@ -1,0 +1,215 @@
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 700px;
+  margin: ($base-size * 3, 5) auto;
+  margin-top: 50px;
+  padding: 25px;
+  width: 100%;
+}
+
+.home-wrapper h1 {
+  text-align: center;
+}
+
+.player {
+  margin-top: ($base-size * 3);
+  margin-bottom: $base-size;
+  width: 100%;
+}
+
+.categories-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: ($base-size * 2);
+}
+
+.green-audio-player .slider .gap-progress .pin {
+  background-color: $color-red;
+}
+
+.subscribe {
+  margin-top: 10%;
+  margin-bottom: 2%;
+}
+
+.subscribe-container {
+  display: flex;
+  justify-content: center;
+}
+
+.splash {
+  position: absolute;
+
+  h1 {
+    transform: translateY(-110%);
+  }
+}
+
+.splash-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    transform: translate(12%, -16%);
+  }
+}
+
+.btn {
+  background-color: $color-red;
+  border-color: $color-red;
+  font-size: 40px;
+  font-weight: $font-bold;
+  letter-spacing: 10px;
+}
+
+.btn:hover {
+  background-color: $color-red;
+  border-color: $color-red;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+}
+
+.image h1 {
+  position: absolute;
+  color: $color-white;
+  transform: translate(-80%, -70%);
+}
+
+.image .lastname h1 {
+  position: absolute;
+  transform: translate(-130%, -70%);
+  margin-top: 33px;
+}
+
+.redLastname {
+  color: $color-red;
+}
+
+.album-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: right;
+  transform: translate(10%, -60%);
+
+  h3 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: $font-bold;
+    color: $color-grey;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    text-align: right;
+  }
+
+  span {
+    width: 100%;
+    font-size: 40px;
+    font-weight: $font-normal;
+    color: $color-white;
+    letter-spacing: 10px;
+    text-align: right;
+  }
+}
+
+.typeMusic {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.typeMusic h2 {
+  font-size: $base-size * 2;
+  letter-spacing: 5px;
+  color: $color-white;
+  font-weight: $font-semibold;
+}
+
+.listMusic {
+  margin-bottom: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+.listMusic li a {
+  text-decoration: none;
+  color: $color-white;
+  font-size: $base-size * 2;
+  font-weight: $font-normal;
+  letter-spacing: 4px;
+}
+
+.listMusic li a.activateFilter {
+  color: $color-red;
+  font-weight: $font-bold;
+}
+
+.filterMusic.disabled {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .typeMusic {
+    text-align: center;
+    display: block;
+    border: 2px solid $color-red;
+
+    li {
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      display: none;
+      transition: all 0.5s ease;
+    }
+  }
+
+  .typeMusic:hover li {
+    visibility: visible;
+    display: block;
+    opacity: 1;
+  }
+
+  .image-artist {
+    display: none;
+  }
+
+  .btn {
+    font-size: 20px;
+    letter-spacing: 5px;
+  }
+
+  .splash .album-description {
+    width: 100%;
+    display: flex;
+
+    // flex-direction: column;
+    position: absolute;
+    // justify-content: right;
+    transform: translate(10%, 150%);
+
+    h3 {
+      font-size: 20px;
+      letter-spacing: 5px;
+      //text-align: right;
+    }
+
+    span {
+      font-size: 20px;
+      letter-spacing: 5px;
+      //text-align: right;
+    }
+  }
+}
